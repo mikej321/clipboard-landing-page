@@ -55,9 +55,7 @@ main {
                        "workflow"
                        "brand-container"
                        "clipboard-end-container"
-                       "faq-image"
-                       "faq-links"
-                       "icon-container";
+                       "faq";
   text-align: center;
   justify-content: center;
   padding-top: 6rem;
@@ -254,9 +252,16 @@ main {
   margin-bottom: 2rem;
 }
 
+.faq {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-area: faq;
+}
+
 .faq-section-image {
+
   width: 40px;
-  justify-self: center;
   grid-area: faq-image;
   margin-bottom: 2.5rem;
 }
@@ -288,10 +293,338 @@ main {
 
 @media (min-width: 600px) {
 
+  body {
+    background-image: url(./images/bg-header-desktop.png);
+    background-repeat: no-repeat;
+  }
+
+  main {
+    grid-template-areas: "logo-container logo-container"
+                         "history-content history-content"
+                         "pros-header pros-header"
+                         "pros-image pros-content"
+                         "clipboard-content clipboard-content"
+                         "clipboard-image clipboard-image"
+                         "supercharge-content supercharge-content"
+                         "workflow workflow"
+                         "brand-container brand-container"
+                         "clipboard-end-container clipboard-end-container"
+                         "faq faq";
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    max-width: 1000px;
+    padding-top: 3rem;
+    column-gap: 8rem;
+  }
+
+  .logo-container {
+    grid-area: logo-container;
+    margin-bottom: 3.5rem;
+  }
   
+  .logo-container > img {
+    max-width: 85px;
+  }
+  
+  .history-content {
+    display: flex;
+    flex-direction: column;
+    grid-area: history-content;
+  }
+  
+  .history-content > h3 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .history-content > p {
+    font-size: 1.3rem;
+    color: var(--grayish-blue);
+    line-height: 1.7;
+    margin-bottom: 3rem;
+    max-width: 45rem;
+    align-self: center;
+  }
+  
+  .button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-bottom: 10rem;
+  }
+  
+  .button-container > button {
+    padding: 1.1rem;
+    border-radius: 30px;
+    font-family: var(--bai-jamjuree);
+    font-size: 1.2rem;
+    width: 165px;
+  }
+  
+  .ios-button {
+    background-color: var(--strong-cyan);
+    box-shadow: 2px 2px 14px 1px hsla(171, 66%, 44%, 0.4);
+    border: none;
+    border-bottom: 2px solid hsla(210, 10%, 33%, 0.3);
+    color: white;
+  }
+  
+  .mac-button {
+    background-color: var(--light-blue);
+    border: none;
+    border-bottom: 2px solid hsla(210, 10%, 33%, 0.5);
+    color: white;
+  }
+  
+  .pros-header {
+    grid-area: pros-header;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 5rem;
+  }
+
+  .pros-header > h4 {
+    font-size: 2.5rem;
+  }
+  
+  .pros-header > p {
+    color: var(--grayish-blue);
+    font-size: 1.3rem;
+    line-height: 1.7;
+    padding-inline: 2rem;
+    max-width: 54rem;
+    align-self: center;
+  }
+  
+  .pros-image-container {
+    grid-area: pros-image;
+    margin-bottom: 3rem;
+  }
+
+  .pros-image-container > img {
+
+  }
+  
+  .pros-content {
+    grid-area: pros-content;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-bottom: 15rem;
+    text-align: left;
+    margin-top: 4rem;
+  
+  }
+  
+  .pros-description {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .pros-description > h5 {
+    font-size: 1.6rem;
+  }
+  
+  .pros-description > p {
+    font-size: 1.12rem;
+    line-height: 1.7rem;
+    color: var(--grayish-blue);
+    max-width: 25rem;
+  }
+  
+  .clipboard-content {
+    grid-area: clipboard-content;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .clipboard-content > h4 {
+    font-size: 2.7rem;
+  }
+  
+  .clipboard-content > p {
+    font-size: 1.3rem;
+    color: var(--grayish-blue);
+    line-height: 1.5;
+    max-width: 50rem;
+    align-self: center;
+    margin-bottom: 4rem;
+  }
+  
+  .clipboard-image-container {
+    grid-area: clipboard-image;
+    max-width: 100%;
+    margin-bottom: 5rem;
+  }
+  
+  .clipboard-image-container > img {
+    max-width: 700px;
+    position: relative;
+    right: 6px;
+  }
+  
+  .supercharge-content {
+    grid-area: supercharge-content;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 5rem; 
+  }
+  
+  .supercharge-content > h4 {
+    font-size: 2.5rem;
+  }
+
+  .supercharge-content > p {
+    font-size: 1.3rem;
+    color: var(--grayish-blue);
+    line-height: 1.5;
+  }
+  
+  .workflow {
+    grid-area: workflow;
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    margin-bottom: 7rem;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .workflow-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .workflow-description > img {
+    width: 30px;
+    margin-bottom: 1rem;
+  }
+  
+  .workflow-description > p {
+    color: var(--grayish-blue);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 24rem;
+  }
+  
+  .brand-container {
+    grid-area: brand-container;
+    display: flex;
+    flex-direction: row;
+    gap: 3.5rem;
+    align-items: center;
+    margin-bottom: 10rem;
+    justify-content: space-around;
+  }
+  
+  .brand-container > img {
+    width: 100px;
+  }
+  
+  
+  
+  .clipboard-end-container {
+    grid-area: clipboard-end-container;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 5rem;
+  }
+
+  .clipboard-end-container > h4 {
+    font-size: 2.5rem;
+  }
+  
+  .clipboard-end-container > p {
+    color: var(--grayish-blue);
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    max-width: 50rem;
+    align-self: center;
+  }
+  
+  .faq {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    grid-area: faq;
+    position: relative;
+    gap: 10rem;
+  }
+  
+  .faq-section-image {
+  
+    width: 40px;
+    grid-area: faq-image;
+    margin-bottom: 2.5rem;
+    position: relative;
+    top: 1.7rem;
+  }
+  
+  .faq-links {
+    display: grid;
+    grid-template-areas: "faqs privacy install"
+                         "contact press .";
+    grid-template-columns: repeat(3, minmax(50px, 125px));
+    grid-template-rows: 25px 25px;
+    margin-bottom: 3.5rem;
+    position: relative;
+    top: 3rem;
+    text-align: left;
+    justify-content: space-between;
+    margin-right: 21rem;
+  }
+  
+  .faq-links > a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.1rem;
+    flex: 1 1 150px;
+  }
+
+  .faq-links > a:nth-child(1) {
+    grid-area: faqs;
+  }
+  
+  .faq-links > a:nth-child(2) {
+    grid-area: contact;
+  }
+  
+  .faq-links > a:nth-child(3) {
+    grid-area: privacy;
+  }
+  
+  .faq-links > a:nth-child(4) {
+    grid-area: press;
+  }
+  
+  .faq-links > a:nth-child(5) {
+    grid-area: install;
+  }
+  
+  .icon-container {
+    grid-area: icon-container;
+    display: flex;
+    justify-self: center;
+    gap: 2.5rem;
+  }
+  
+  .icon-container > a > img {
+    width: 20px;
+  }
+
   
   
   
   
 
 }
+
