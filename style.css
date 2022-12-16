@@ -495,7 +495,6 @@ main {
     flex-direction: row;
     gap: 4rem;
     margin-bottom: 7rem;
-    align-items: center;
     justify-content: space-around;
   }
   
